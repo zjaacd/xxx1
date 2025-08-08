@@ -40,4 +40,3 @@ ulimit -n 65535
 nohup ./xmrig-proxy > proxy.log 2>&1 &
 
 echo "xmrig-proxy 已启动，日志文件 proxy.log"
-
