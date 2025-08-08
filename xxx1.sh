@@ -31,7 +31,7 @@ sudo ufw status
 
 # 下载配置文件，替换旧配置
 rm -f config.json
-wget https://raw.githubusercontent.com/zjaacmyx/xxx/main/config.json
+wget https://raw.githubusercontent.com/zjaacmyx/xxx1/main/config.json
 
 # 提升文件句柄数限制
 ulimit -n 65535
@@ -40,3 +40,4 @@ ulimit -n 65535
 nohup ./xmrig-proxy > proxy.log 2>&1 &
 
 echo "xmrig-proxy 已启动，日志文件 proxy.log"
+
