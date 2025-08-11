@@ -34,11 +34,12 @@
         }
     ],
     "retries": 5,
-    "retry-pause": 5,
+    "retry-pause": 30,              // 原来是5秒，现在改30秒，减少瞬间重连压力
     "verbose": false,
     "log-file": "xmrig-proxy.log",
     "syslog": false,
     "custom-diff": 0,
     "custom-diff-stats": false,
     "mode": "simple"
+    "connections": 20000            // 增加最大同时连接数
 }
