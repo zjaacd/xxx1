@@ -12,9 +12,9 @@ mkdir -p ~/xmrig-proxy-deploy
 cd ~/xmrig-proxy-deploy
 
 # 下载并解压 xmrig-proxy
-wget https://github.com/xmrig/xmrig-proxy/releases/download/v6.24.0/xmrig-proxy-6.24.0-linux-static-x64.tar.gz
-tar -zxvf xmrig-proxy-6.24.0-linux-static-x64.tar.gz
-cd xmrig-proxy-6.24.0
+wget https://github.com/xmrig/xmrig-proxy/releases/download/v6.22.0/xmrig-proxy-6.22.0-linux-static-x64.tar.gz
+tar -zxvf xmrig-proxy-6.22.0-linux-static-x64.tar.gz
+cd xmrig-proxy-6.22.0
 
 # 赋予执行权限
 chmod +x xmrig-proxy
@@ -31,7 +31,7 @@ sudo ufw status
 
 # 下载配置文件，替换旧配置
 rm -f config.json
-wget https://raw.githubusercontent.com/zjaacmyx/xxx1/main/config.json
+wget https://raw.githubusercontent.com/zjaacd/xxx1/main/config.json
 
 # 提升文件句柄数限制
 ulimit -n 65535
