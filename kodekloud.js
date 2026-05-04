@@ -281,7 +281,6 @@ async function awsLogin(creds) {
 
   const browser = await chromium.launch({
     headless: false,
-    executablePath: '/usr/bin/chromium-browser',
     args: ['--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--window-size=1280,900'],
   });
 
