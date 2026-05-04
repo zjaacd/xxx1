@@ -501,21 +501,8 @@ python3 run_multi_region.py
   log('MAIN', '✅ 全流程完成');
 }
 
-// main().catch(e => {
-//   console.error('❌ 失败:', e.message || e);
-//   process.exit(1);
-// });
+main().catch(e => {
+  console.error('❌ 失败:', e.message || e);
+  process.exit(1);
+});
 
-async function runForever() {
-  while (true) {
-    try {
-      await main();
-    } catch (e) {
-      console.error('❌ 失败:', e.message || e);
-      // 出错后稍微等一下再重试，避免瞬间循环
-      await new Promise(res => setTimeout(res, 3000));
-    }
-  }
-}
-
-runForever();
