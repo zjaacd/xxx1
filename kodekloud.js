@@ -19,7 +19,6 @@ const https = require('https');
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-const RESULT_PATH = '/root/.openclaw/workspace/kodekloud_result.json';
 const FIREBASE_KEY = 'AIzaSyAVy3_TcBija6Pc9_-glfSZuqft01zgoSA';
 const MAIL_API = 'https://api.mail.tm';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36';
@@ -385,8 +384,6 @@ async function main() {
     current_time: now,
     third_step: awsCreds,
   };
-  fs.writeFileSync(RESULT_PATH, JSON.stringify(result, null, 2));
-  log('MAIN', `结果已保存: ${RESULT_PATH}`);
 
   // Phase 4: 登录 AWS Console
   const { browser, page } = await awsLogin(awsCreds);
